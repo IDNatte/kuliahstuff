@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+ 
+    <script>
+        function allowDrop(ev) {
+        ev.preventDefault();
+        }
+
+        function drag(ev) {
+        ev.dataTransfer.setData("float", ev.target.id);
+        }
+
+            function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("float");
+            
+            if (data==1){
+            ev.target.appendChild(document.getElementById(data));
+            }
+            else if(data==2){
+            ev.target.appendChild(document.getElementById(data));
+            }
+            else if(data==3){
+            ev.target.appendChild(document.getElementById(data));
+            }
+            else if(data==4){
+            ev.target.appendChild(document.getElementById(data));
+            }
+            }
+        </script>
+	</head>
+<body>
+
+<header class="header">
+		<div class="home">
+	 
+			<ul>
+				<li><a href="index.html">Beranda</a></li>
+				<li class="dropdown"><a href="#">Menu Pilihan Belajar</a>
+					<ul class="isi-dropdown">
+						<li><a href="pengenalanhuruf.html">Pengenalan Huruf</a></li>
+						<li><a href="pengenalanangka.html">Pengenalan Angka</a></li>
+						<li><a href="pengenalanwarna.html">Pengenalan Warna</a></li>
+						<li><a href="kumpulandoa.html">Kumpulan Do'a</a></li>
+						<li><a href="game.html">Permainan</a></li>
+					</ul>
+				</li>
+				<li><a href="tentangsaya.html">Tentang Saya</a></li>
+			</ul>
+	 
+		</div>
+	</header>
+<abisay>
+    
+        <div class="dragsoal">
+       <center>
+       <b>Isilah kotak kosong dibawah ini sesuai warna yang telah ditentukan:</b>
+        <br><br><b>ungu:</b>
+       <br>
+        
+        <div class="kotak" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+       
+
+      <br><b>Kuning:</b>
+       <br>
+        
+        <div class="kotak" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+       <br><b>Merah:</b>
+       <br>
+        
+        <div class="kotak" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+       <br><b>Hijau:</b>
+       <br>
+        
+        <div class="kotak" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          </center>
+          </div>
+
+
+        <div class="dragdrop">
+        <b> Drag dan drop hewan berikut:</b>
+        <br>
+        <br>
+        <img id="0" src="warna/biru.png" draggable="true" ondragstart="drag(event)" width="100px" height="60px">
+        <img id="0" src="warna/coklat.png" draggable="true" ondragstart="drag(event)" width="90px" height="70px">
+        <br>
+        <img id="4" src="warna/hijau.png" draggable="true" ondragstart="drag(event)" width="90px" height="80px">
+        <img id="1" src="warna/ungu.png" draggable="true" ondragstart="drag(event)" width="90px" height="80px">
+        <br>
+        <img id="0" src="warna/putih.png" draggable="true" ondragstart="drag(event)" width="90px" height="60px">
+        <img id="0" src="warna/hitam.png" draggable="true" ondragstart="drag(event)" width="90px" height="60px">
+        <br>
+        <img id="0" src="warna/abu-abu.png" draggable="true" ondragstart="drag(event)" width="90px" height="80px">
+        <img id="2" src="warna/kuning.png" draggable="true" ondragstart="drag(event)" width="90px" height="80px">
+        <br>
+        <img id="0" src="warna/merahmuda.png" draggable="true" ondragstart="drag(event)" width="90px" height="90px">
+        <img id="3" src="warna/merah.png" draggable="true" ondragstart="drag(event)" width="90px" height="90px">
+        <br>
+        <br>
+          </div>
+      
+    
+	</abisay>
+</body>
+</html>
